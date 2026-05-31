@@ -1,0 +1,12 @@
+<?php include 'includes/db.php';
+if($_POST){
+$name=$_POST['name']; $bg=$_POST['blood_group'];
+$conn->query("INSERT INTO donors(name,blood_group) VALUES('$name','$bg')");
+echo 'Donor Registered';
+}
+?>
+<form method='post'>
+<input name='name' placeholder='Name'>
+<input name='blood_group' placeholder='Blood Group'>
+<button>Save</button>
+</form>
